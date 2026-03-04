@@ -9,7 +9,7 @@ const centerName=document.getElementById("centerName")
 /* ---------------- TEXT ---------------- */
 
 const textSource=
-" Happy Birthday ครับแฟน 🎂 ขอให้ปีนี้มีความสุขมากๆ รวยๆ เฮงๆ นะครับ ❤️ "
+" Happy Birthday ครับแฟน 🎂 ขอให้ปีนี้มีความสุขมากๆ มีหมาเด็กอยู่ข้างๆรักนะจุ๊บ ❤️ "
 
 const rows=[]
 const rowsCount=12
