@@ -1,0 +1,241 @@
+:root {
+
+--deep-space:#050505;
+--nebula-pink:#ff758f;
+--star-white:#ffffff;
+--soft-glow:rgba(255,117,143,0.3);
+
+--font-main:'Sarabun',sans-serif;
+
+}
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+body{
+
+background:
+radial-gradient(circle at center,#1a0a10 0%,var(--deep-space) 100%);
+
+background-attachment:fixed;
+
+color:var(--star-white);
+
+font-family:var(--font-main);
+
+overflow:hidden;
+
+width:100vw;
+height:100vh;
+
+}
+
+/* canvas background */
+
+#bg-canvas{
+
+position:fixed;
+top:0;
+left:0;
+
+z-index:1;
+
+filter:blur(.5px);
+
+}
+
+/* scrolling text container */
+
+#heart{
+
+position:relative;
+z-index:2;
+
+width:100%;
+height:100%;
+
+}
+
+/* text rows */
+
+.row{
+
+position:fixed;
+
+white-space:nowrap;
+
+font-size:20px;
+font-weight:500;
+
+letter-spacing:1px;
+
+color:var(--star-white);
+
+text-shadow:
+0 0 10px var(--soft-glow),
+0 0 20px rgba(255,117,143,0.15);
+
+opacity:.8;
+
+will-change:transform;
+
+transform:translateZ(0);
+
+transition:
+transform .12s ease-out,
+color .25s ease;
+
+pointer-events:auto;
+
+cursor:default;
+
+}
+
+/* hover glow */
+
+.row:hover{
+
+color:var(--nebula-pink);
+
+opacity:1;
+
+text-shadow:
+0 0 12px var(--nebula-pink),
+0 0 25px rgba(255,117,143,0.35);
+
+}
+
+/* highlight name */
+
+.highlight{
+
+color:var(--nebula-pink);
+font-weight:700;
+
+}
+
+/* ---------------------------
+INTRO SCREEN
+--------------------------- */
+
+#intro{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:#050505;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+z-index:10;
+
+}
+
+/* intro box */
+
+.intro-box{
+
+text-align:center;
+
+}
+
+/* intro title */
+
+.intro-box h1{
+
+font-size:42px;
+
+margin-bottom:10px;
+
+color:var(--nebula-pink);
+
+}
+
+/* intro text */
+
+.intro-box p{
+
+opacity:.8;
+
+}
+
+/* button */
+
+#startBtn{
+
+margin-top:25px;
+
+padding:12px 24px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:6px;
+
+background:var(--nebula-pink);
+
+color:white;
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+#startBtn:hover{
+
+transform:scale(1.05);
+
+box-shadow:
+0 0 10px var(--nebula-pink),
+0 0 25px rgba(255,117,143,0.4);
+
+}
+
+/* ---------------------------
+CENTER NAME
+--------------------------- */
+
+#centerName{
+
+position:fixed;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%) scale(.5);
+
+font-size:72px;
+
+font-weight:700;
+
+color:var(--nebula-pink);
+
+opacity:0;
+
+pointer-events:none;
+
+z-index:5;
+
+text-shadow:
+0 0 20px rgba(255,117,143,.5),
+0 0 40px rgba(255,117,143,.3);
+
+transition:
+opacity 1.2s,
+transform 1.2s;
+
+}
